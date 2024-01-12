@@ -29,19 +29,19 @@ $this->params['breadcrumbs'][] = $this->title;
             'gestor' => 'Gestor',
             'organizador' => 'Organizador',
             'usuario' => 'Usuario',
-            '' => 'Jugador sin Registrar',
-        ], ['prompt' => 'Selecciona un rol']);
+            'inv' => 'Jugador sin Registrar',
+        ]);
     }elseif (Yii::$app->user->can('admin')) {
         echo $form->field($model, 'rol')->dropDownList([
             'gestor' => 'Gestor',
             'organizador' => 'Organizador',
             'usuario' => 'Usuario',
-            '' => 'Jugador sin Registrar',
-        ], ['prompt' => 'Selecciona un rol']);
+            'inv' => 'Jugador sin Registrar',
+        ]);
     }elseif (Yii::$app->user->can('gestor')) {
         echo $form->field($model, 'rol')->dropDownList([
-            '' => 'Jugador sin Registrar',
-        ], ['prompt' => 'Selecciona un rol']);
+            'inv' => 'Jugador sin Registrar',
+        ]);
     }
     ?>
 
